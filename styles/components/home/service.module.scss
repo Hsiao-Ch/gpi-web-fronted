@@ -1,0 +1,71 @@
+@import "@/styles/base/variables";
+@import "@/styles/base/mixin";
+
+.container {
+  padding: 3rem;
+  background-image: url("../../../public/service/home-service-bg.png");
+
+  @include Medium {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+
+    .items {
+      padding: 2rem;
+      background-color: #fff;
+      display: flex;
+      box-shadow: #e6e6e6 0px 0px 11px 1px;
+
+      &:hover {
+        .icon {
+          background-color: $main-green;
+          transition: background-color .5s ease;
+
+          svg {
+            color: #fff;
+          }
+        }
+      }
+
+      @include Small {
+        padding: 1rem;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+
+        svg {
+          color: #999;
+          font-size: 24px;
+        }
+      }
+
+      .subTitle {
+        padding: 1rem 0;
+        font-size: 18px;
+      }
+
+      .content {
+        color: #888;
+      }
+    }
+  }
+}

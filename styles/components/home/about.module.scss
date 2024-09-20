@@ -1,0 +1,93 @@
+@import "@/styles/base/variables";
+@import "@/styles/base/mixin";
+
+.container {
+  padding: 3rem;
+
+  @include Medium {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4rem;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-around;
+
+    @include Small {
+      flex-direction: column;
+    }
+
+    .items {
+      width: 33%;
+      padding: 0 1rem;
+
+      @include Small {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+      .image {
+        width: 100%;
+        height: 230px; // Maintain a fixed height
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          scale: 1.2;
+          transition: transform 0.3s ease;
+        }
+
+        // Hover effect to scale image
+        &:hover img {
+          transform: scale(
+            0.9
+          ); // Adjust the scale value for desired zoom level
+        }
+      }
+
+      .subTitle {
+        padding: 1rem 0;
+        font-size: 18px;
+      }
+
+      .content {
+        color: #888;
+        line-height: 22px;
+        margin-bottom: 1rem;
+      }
+
+      .readMore {
+        position: relative;
+        cursor: pointer;
+        padding-bottom: 5px;
+        width: fit-content;
+
+        // Pseudo-element for underline
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 3px; // Adjust thickness of the underline
+          background-color: $main-green; // Use the main green color
+          transition: width 0.3s ease; // Control animation speed and easing
+        }
+
+        // Hover effect to extend underline
+        &:hover::after {
+          width: 100%; // Extend underline from left to right
+        }
+      }
+    }
+  }
+}

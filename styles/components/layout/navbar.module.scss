@@ -1,0 +1,166 @@
+@import "@/styles/base/mixin";
+@import "@/styles/base/variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 90px;
+  padding: 0 6rem;
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 12rem);
+  z-index: 9999;
+
+  .logoLink img {
+    max-height: 80px;
+    width: auto;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-right: 10%;
+
+    @include Medium {
+      display: none;
+    }
+  }
+
+  .linkItem {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5f6368;
+    z-index: 999;
+
+    .item,
+    a {
+      text-decoration: none;
+      color: #5f635d;
+      padding: 1rem 0.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $main-green;
+      }
+    }
+
+    &.dropdown {
+      position: relative;
+
+      &:hover .dropdownMenu {
+        display: block;
+      }
+
+      .dropdownMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -10px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        width: 180px;
+
+        .item,
+        a {
+          display: block;
+          padding: 0.8rem 1rem;
+          color: #333;
+          white-space: nowrap;
+
+          &:hover {
+            background-color: $main-green;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  // Hamburger menu styling for Medium screens
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: $main-green;
+    padding: 0.4rem 0.6rem;
+
+    @include Medium {
+      display: block;
+    }
+
+    div {
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+    z-index: 999;
+    background-color: #fff;
+
+    @include Medium {
+      display: block;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+
+      .linkItem {
+        list-style: none;
+
+        .item,
+        a {
+          color: #5f635d;
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem;
+
+          &:hover {
+            // background-color: $main-green;
+            color: $main-green;
+          }
+        }
+
+        &.dropdown {
+          position: static;
+
+          &:hover .dropdownMenu {
+            display: block;
+          }
+
+          .dropdownMenu {
+            display: block;
+            position: static;
+            top: 100%;
+            left: 0;
+            background-color: $main-green;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: calc(100% - 1rem);
+            margin: 0 0.5rem;
+
+            a {
+              display: block;
+              padding: 0.8rem 1rem;
+              color: #fff;
+              white-space: nowrap;
+
+              &:hover {
+                background-color: #fff;
+                color: $main-green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
