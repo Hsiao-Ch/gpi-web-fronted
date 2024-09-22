@@ -1,0 +1,107 @@
+@import "@/styles/base/mixin";
+@import "@/styles/base/variables";
+
+.container {
+  padding: 5rem 3rem;
+  min-height: calc(100vh - 90px - 10rem);
+  background-color: #283618;
+  position: relative;
+
+  @include Small {
+    padding: 5rem 1rem;
+  }
+}
+
+.footerWrap {
+  display: grid;
+  grid-template-columns: 350px 1fr 1fr;
+  column-gap: 20px;
+
+  @include Medium {
+    grid-template-columns: 300px 1fr 1fr;
+    column-gap: 10px;
+  }
+
+  @include Small {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+  }
+
+  @include X-Small {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 50px;
+    color: #fff;
+    line-height: 50px;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    color: #fff;
+    line-height: normal;
+    letter-spacing: 2px;
+    font-size: 20px;
+
+    @include X-Small {
+      margin: .5rem 0;
+    }
+  }
+
+  a,
+  p {
+    color: #bebebe;
+    line-height: 30px;
+  }
+
+  a:hover {
+    color: #fff;
+    transition: 0.5s color ease;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
+
+    @include Medium {
+      margin-right: 10px;
+    }
+
+    a {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      @include Small {
+        width: 100%;
+      }
+
+      @include X-Small {
+        width: 50%;
+      }
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .aboutContent {
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+}
+
+.fbIcon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
+
+  @include Small {
+    bottom: 2rem;
+  }
+}
