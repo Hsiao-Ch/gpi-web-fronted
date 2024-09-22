@@ -7,7 +7,9 @@ import styles from "@/styles/components/home/about.module.scss";
 export default function About() {
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>關於我們</h2>
+      <div className={styles.titleWrap}>
+        <h2 className={styles.title}>關於我們</h2>
+      </div>
       <div className={styles.wrap}>
         <div className={styles.items}>
           <div className={styles.image}>

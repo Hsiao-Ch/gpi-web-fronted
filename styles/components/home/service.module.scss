@@ -1,5 +1,6 @@
 @import "@/styles/base/variables";
 @import "@/styles/base/mixin";
+@import "@/styles/base/extends";
 
 .container {
   padding: 3rem;
@@ -9,11 +10,8 @@
     padding: 3rem 1rem;
   }
 
-  .title {
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 4rem;
+  .titleWrap {
+    @extend %home-title;
   }
 
   .wrap {
@@ -30,7 +28,7 @@
       &:hover {
         .icon {
           background-color: $main-green;
-          transition: background-color .5s ease;
+          transition: background-color 0.5s ease;
 
           svg {
             color: #fff;
