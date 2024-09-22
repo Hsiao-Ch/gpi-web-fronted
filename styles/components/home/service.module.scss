@@ -19,11 +19,22 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 3rem;
 
+    @include Small {
+      column-gap: 1rem;
+    }
+
+    @include X-Small {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+
     .items {
       padding: 2rem;
       background-color: #fff;
       display: flex;
       box-shadow: #e6e6e6 0px 0px 11px 1px;
+      display: flex;
+      align-items: center;
 
       &:hover {
         .icon {
@@ -37,7 +48,7 @@
       }
 
       @include Small {
-        padding: 1rem;
+        padding: 1rem .5rem;
       }
 
       .icon {
@@ -50,6 +61,11 @@
         justify-content: center;
         margin-right: 1rem;
 
+        @include Small {
+          width: 40px;
+          height: 40px;
+        }
+
         svg {
           color: #999;
           font-size: 24px;
@@ -59,6 +75,11 @@
       .subTitle {
         padding: 1rem 0;
         font-size: 18px;
+        text-wrap: nowrap;
+
+        @include Small {
+          font-size: 16px;
+        }
       }
 
       .content {

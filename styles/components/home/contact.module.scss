@@ -24,6 +24,10 @@
   .contentWrap {
     padding: 2rem;
 
+    @include Small {
+      padding: 2rem 1rem;
+    }
+
     .titleWrap {
       justify-content: start;
 
