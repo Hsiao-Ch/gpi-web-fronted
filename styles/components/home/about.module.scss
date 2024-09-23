@@ -5,7 +5,7 @@
 .container {
   padding: 3rem;
 
-  @include Medium {
+  @include Small {
     padding: 3rem 1rem;
   }
 
@@ -14,21 +14,21 @@
   }
 
   .wrap {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+
+    @include Medium {
+      gap: 1rem;
+    }
 
     @include Small {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
     .items {
-      width: 33%;
-      padding: 0 1rem;
-
-      @include Small {
-        width: 100%;
-        padding: 1rem 0;
-    }
+      width: 100%;
 
       .image {
         width: 100%;
@@ -55,12 +55,20 @@
       .subTitle {
         padding: 1rem 0;
         font-size: 18px;
+
+        @include Small {
+          padding: .5rem 0;
+        }
       }
 
       .content {
         color: #888;
         line-height: 22px;
         margin-bottom: 1rem;
+
+        @include Small {
+          margin-bottom: .5rem;
+        }
       }
 
       .readMore {

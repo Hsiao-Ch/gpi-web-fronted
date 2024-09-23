@@ -1,0 +1,150 @@
+@import "@/styles/base/variables";
+@import "@/styles/base/mixin";
+@import "@/styles/base/extends";
+
+.container {
+    margin-bottom: 5rem;
+
+  .titleWrap {
+    margin: 2rem 0 1rem;
+
+    @extend %home-title;
+
+    .title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .wordWrap {
+    padding: 2rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include Small {
+        padding: 2rem 1rem;
+    }
+
+    .wordContent {
+      width: 50%;
+      color: #878787;
+
+      @include Small {
+        width: 80%;
+      }
+
+      @include X-Small {
+        width: 100%;
+      }
+    }
+
+    .wordItems {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+
+      @include Small {
+        grid-template-columns: 1fr;
+      }
+
+      .item {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+          width: 150px;
+          height: 150px;
+          background-color: #474747;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background-color: $main-green;
+            transition: 0.5s background-color ease;
+          }
+
+          svg {
+            color: #fff;
+            font-size: 30px;
+          }
+        }
+
+        .subTitle {
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .content {
+          color: #878787;
+        }
+      }
+    }
+  }
+
+  .aboutWrap {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    @include Small {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    @include X-Small {
+        grid-template-columns: 1fr;
+    }
+
+    .titleWrap {
+      align-items: start;
+      margin-bottom: 2rem;
+
+      .line {
+        background-color: #fff;
+      }
+    }
+
+    p,
+    h2 {
+      color: #fff;
+      text-align: justify;
+    }
+
+    .contentWrap {
+      background-color: #283618;
+      padding: 1rem 10rem 2rem 3rem;
+
+      @include Small {
+        padding: 1rem;
+      }
+
+      .subTitle {
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      p {
+        line-height: 30px;
+      }
+    }
+
+    .imageWrap {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      @include X-Small {
+        display: none;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}

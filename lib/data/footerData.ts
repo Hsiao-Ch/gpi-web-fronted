@@ -1,6 +1,6 @@
 export const FooterLinkData = [
-    {'name': '關於我們', 'link': ''},
-    {'name': '獎項與證書', 'link': ''},
+    {'name': '關於我們', 'link': '/prflio/about'},
+    {'name': '獎項與證書', 'link': '/prflio/award'},
     {'name': '加入我們', 'link': ''},
     {'name': '環境、健康與安全政策', 'link': ''},
     {'name': '最新消息', 'link': ''},
