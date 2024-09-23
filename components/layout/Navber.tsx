@@ -53,8 +53,8 @@ export default function Navbar() {
             公司簡介 <IoMdArrowDropdown />
           </p>
           <div className={styles.dropdownMenu}>
-            <a href="/about">關於我們</a>
-            <a href="/team">獎項與證書</a>
+            <a href="/profilo/about">關於我們</a>
+            <a href="/profilo/award">獎項與證書</a>
             <a href="/team">加入我們</a>
             <a href="/team">環境、健康與安全政策</a>
             <a href="/team">最新消息</a>

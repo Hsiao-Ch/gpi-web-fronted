@@ -1,0 +1,65 @@
+@import "@/styles/base/mixin";
+@import "@/styles/base/variables";
+
+.wrap {
+    width: 200px;
+
+    .linkItems {
+        margin-bottom: 2rem;
+
+        li {
+            border: .5px solid #e1e1e1d1;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e1e1e18b;
+                transition: background-color .5s ease;
+
+                svg {
+                    padding-right: 0;
+                    transition: padding-right .5s ease;
+                }
+            }
+
+            svg {
+                color: #5f635d;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .helpWrap {
+        background-color: $dark-green;
+        padding: 2rem 1.5rem 3rem;
+        
+        p, a {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .subTitle {
+            font-size: 20px;
+        }
+
+        .content {
+            padding: 2rem 0 3rem;
+            letter-spacing: 1px;
+        }
+
+        a {
+            background-color: #fff;
+            color: #888;
+            padding: 1rem;
+            border-radius: 5px;
+
+            &:hover {
+                color: $dark-green;
+                transition: .5s color ease-in-out;
+            }
+        }
+    }
+}

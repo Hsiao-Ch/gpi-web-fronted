@@ -7,14 +7,19 @@
   align-items: center;
   background-color: white;
   height: 90px;
-  padding: 0 6rem;
-  position: fixed;
+  padding: 0 3rem;
+  position: sticky;
   top: 0;
-  width: calc(100vw - 12rem);
+  width: calc(100% - 6rem);
   z-index: 9999;
 
+  @include Small {
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
   .logoLink img {
-    max-height: 80px;
+    max-height: 60px;
     width: auto;
   }
 
@@ -26,6 +31,11 @@
     margin-right: 10%;
 
     @include Medium {
+      margin-right: 0;
+      gap: 1rem;
+    }
+
+    @include Small {
       display: none;
     }
   }
@@ -88,7 +98,7 @@
     background-color: $main-green;
     padding: 0.4rem 0.6rem;
 
-    @include Medium {
+    @include Small {
       display: block;
     }
 
