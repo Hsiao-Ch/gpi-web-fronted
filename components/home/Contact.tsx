@@ -11,9 +11,6 @@ type FormInputs = {
   message: string;
 };
 
-// service_v1lmjhq
-// template_4dhsmx1
-// xzbGKMfhI6DURxMFU
 export default function Contact() {
   const {
     register,
@@ -28,7 +25,6 @@ export default function Contact() {
   const PUBLICK_ID = "xzbGKMfhI6DURxMFU";
 
   const onSubmit = (data: FormInputs) => {
-    console.log(data);
     setLoading(true);
     setTimeout(() => {
       emailjs
