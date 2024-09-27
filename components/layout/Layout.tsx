@@ -1,7 +1,8 @@
 import Navbar from "./Navber";
 import Footer from "./Footer";
-
 import Head from "next/head";
+
+import logo from '@/public/GPi logo.jpg';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="UTF-8" />
         <meta name="description" content="NTUB IMD BIRC CMS" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/GPi logo.jpg" />
       </Head>
       <Navbar />
       <main>
