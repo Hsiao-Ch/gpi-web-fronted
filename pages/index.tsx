@@ -1,28 +1,19 @@
-import Head from 'next/head';
-import Navbar from '@/components/layout/Navber';
-import Banner from '@/components/home/Banner';
-import About from '@/components/home/About';
-import Service from '@/components/home/Service';
-import Contact from '@/components/home/Contact';
-import Footer from '@/components/layout/Footer';
+import Head from "next/head";
+import Navbar from "@/components/layout/Navber";
+import Banner from "@/components/home/Banner";
+import About from "@/components/home/About";
+import Service from "@/components/home/Service";
+import Contact from "@/components/home/Contact";
+import Footer from "@/components/layout/Footer";
+import Layout from "@/components/layout/Layout";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>網站標題</title>
-        <meta name="description" content="網站描述" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <Navbar />
-        <Banner />
-        <About />
-        <Service />
-        <Contact />
-        <Footer />
-      </main>
-    </>
+    <Layout>
+      <Banner />
+      <About />
+      <Service />
+      <Contact />
+    </Layout>
   );
 }

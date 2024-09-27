@@ -3,14 +3,16 @@ import { IoIosArrowDropright } from "react-icons/io";
 
 import { FooterLinkData } from "@/lib/data/footerData";
 import styles from '@/styles/components/layout/sidebar.module.scss';
+import { useRouter } from "next/router";
 
 export default function Sidebar() {
+  const router = useRouter();
   return (
     <div className={styles.wrap}>
       <ul className={styles.linkItems}>
         {FooterLinkData.map((item, index) => (
-          <li key={index}>
-            <Link href={item.link}>{item.name}</Link>
+          <li key={index} onClick={() => router.push(item.link)}>
+            <p>{item.name}</p>
             <IoIosArrowDropright />
           </li>
         ))}

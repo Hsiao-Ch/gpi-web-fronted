@@ -11,7 +11,6 @@ export default function Footer() {
       <div className={styles.footerWrap}>
         <div>
           <h2 className={styles.logo}>GPi</h2>
-          {/* <Image className={styles.logo} src={logo} alt="GPI-LOGO" /> */}
           <p style={{ fontWeight: "bold" }}>
             GREEN PARTNERS INDUSTRY CO., LTD.
           </p>

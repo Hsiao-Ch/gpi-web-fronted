@@ -4,6 +4,10 @@
 .wrap {
     width: 200px;
 
+    @include Small {
+        width: 100%;
+    }
+
     .linkItems {
         margin-bottom: 2rem;
 
@@ -38,7 +42,7 @@
         
         p, a {
             color: #fff;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .subTitle {
