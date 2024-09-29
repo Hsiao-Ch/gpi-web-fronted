@@ -3,6 +3,7 @@ import styles from "@/styles/components/layout/navbar.module.scss";
 import Logo from "@/public/GPi logo.jpg";
 import Image from "next/image";
 import { IoMdArrowDropdown, IoIosArrowDown } from "react-icons/io";
+import { FooterLinkData } from "@/lib/data/footerData";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,16 +54,11 @@ export default function Navbar() {
             公司簡介 <IoMdArrowDropdown />
           </p>
           <div className={styles.dropdownMenu}>
-            <a href="/profilo/about">關於我們</a>
-            <a href="/profilo/award">獎項與證書</a>
-            <a href="/team">加入我們</a>
-            <a href="/team">環境、健康與安全政策</a>
-            <a href="/team">最新消息</a>
-            <a href="/team">我們的團隊</a>
-            <a href="/team">組織架構</a>
-            <a href="/team">活動專區</a>
-            <a href="/team">新聞稿專區</a>
-            <a href="/team">策略聯盟</a>
+            {FooterLinkData.map((item, index) => (
+              <a key={index} href={item.link}>
+                {item.name}
+              </a>
+            ))}
           </div>
         </li>
 
@@ -109,16 +105,11 @@ export default function Navbar() {
             </p>
             {aboutIsShow && (
               <div className={styles.dropdownMenu}>
-                <a href="/about">關於我們</a>
-                <a href="/team">獎項與證書</a>
-                <a href="/team">加入我們</a>
-                <a href="/team">環境、健康與安全政策</a>
-                <a href="/team">最新消息</a>
-                <a href="/team">我們的團隊</a>
-                <a href="/team">組織架構</a>
-                <a href="/team">活動專區</a>
-                <a href="/team">新聞稿專區</a>
-                <a href="/team">策略聯盟</a>
+                {FooterLinkData.map((item, index) => (
+                  <a key={index} href={item.link}>
+                    {item.name}
+                  </a>
+                ))}
               </div>
             )}
           </li>
