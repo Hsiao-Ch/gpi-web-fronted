@@ -5,7 +5,7 @@ export const FooterLinkData = [
     {'name': '環境、健康與安全政策', 'link': '/profilo/environment'},
     {'name': '最新消息', 'link': '/profilo/news'},
     {'name': '我們的團隊', 'link': ''},
-    {'name': '組織架構', 'link': ''},
+    {'name': '組織架構', 'link': '/profilo/organization'},
     {'name': '活動專區', 'link': '/profilo/events'},
     {'name': '新聞稿專區', 'link': '/profilo/press'},
     {'name': '策略聯盟', 'link': ''}

@@ -1,0 +1,71 @@
+@import "@/styles/base/mixin";
+@import "@/styles/base/variables";
+
+.container {
+  padding: 2rem 3rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+
+  @include Small {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+  }
+
+  .section {
+    width: 100%;
+    overflow: hidden;
+
+    .imgWrap {
+      height: 250px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include Medium {
+        height: 220px;
+      }
+
+      @include Small {
+        height: 150px;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .title {
+      margin: 2rem 0 1rem;
+      padding-bottom: 1rem;
+      font-weight: 700;
+      font-size: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .chart {
+      margin: 1rem 5rem;
+      width: calc(100% - 10rem);
+      height: auto;
+      border: 1px solid #878787;
+
+      @include Small {
+        margin: 1rem 2rem;
+        width: calc(100% - 4rem);
+      }
+      
+      @include X-Small {
+        margin: 1rem .5rem;
+        width: calc(100% - 1rem);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
