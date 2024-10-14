@@ -64,7 +64,7 @@ export default function Navbar() {
 
         {/* Dropdown for 產品介紹 */}
         <li className={styles.linkItem}>
-          <a href="/products-parts">產品介紹</a>
+          <a href="/products">產品介紹</a>
         </li>
 
         {/* Dropdown for 服務項目 */}
@@ -114,7 +114,7 @@ export default function Navbar() {
             )}
           </li>
           <li className={styles.linkItem}>
-            <a href="/products-parts">產品介紹</a>
+            <a href="/products">產品介紹</a>
           </li>
           <li className={`${styles.linkItem} ${styles.dropdown}`}>
             <p className={styles.item} onClick={toggleService}>

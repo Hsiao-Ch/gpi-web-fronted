@@ -8,5 +8,5 @@ export const FooterLinkData = [
     {'name': '組織架構', 'link': '/profilo/organization'},
     {'name': '活動專區', 'link': '/profilo/events'},
     {'name': '新聞稿專區', 'link': '/profilo/press'},
-    {'name': '策略聯盟', 'link': ''}
+    {'name': '策略聯盟', 'link': '/profilo/alliances'}
 ]
