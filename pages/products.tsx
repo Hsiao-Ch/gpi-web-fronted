@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaLink, FaSearch } from "react-icons/fa";
 
 import Layout from "@/components/layout/Layout";
+import Modal from "@/components/common/Modal"; // 导入新建的 Modal 组件
 import styles from "@/styles/pages/products.module.scss";
 import { productsData } from "@/lib/data/productsData";
 import { ProductsType } from "@/lib/types/productsType";
@@ -16,6 +17,10 @@ export default function Products() {
   const [page, setPage] = useState("ALL");
   const [total, setTotal] = useState<number>(sum);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
+  const [modalAltText, setModalAltText] = useState("");
+
   const handleClick = (type: string) => {
     setPage(type);
     if (type === "LAKOS") {
@@ -28,6 +33,18 @@ export default function Products() {
       setProductList(productsData);
       setTotal(lokesLength + spirptechLength);
     }
+  };
+
+  const openModal = (imageSrc: any, altText: string) => {
+    setModalImageSrc(imageSrc);
+    setModalAltText(altText);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImageSrc("");
+    setModalAltText("");
   };
 
   return (
@@ -64,13 +81,23 @@ export default function Products() {
                     <Image src={lokesItem.image} alt={lokesItem.alt} />
                   </div>
                   <p className={styles.name}>{lokesItem.alt}</p>
-                  <a href={lokesItem.link} className={styles.readMore}>
+                  <a href={lokesItem.link} className={styles.readMore} target="_blank">
                     閱讀更多
                   </a>
                   <div className={styles.mask}>
-                    <p className={styles.link} onClick={() => window.open(lokesItem.link, '_blank')}><FaLink /></p>
-                    <p className={styles.link} onClick={() => window.open(lokesItem.image, '_blank')}><FaSearch /></p>
-                    </div>
+                    <p
+                      className={styles.link}
+                      onClick={() => window.open(lokesItem.link, "_blank")}
+                    >
+                      <FaLink />
+                    </p>
+                    <p
+                      className={styles.link}
+                      onClick={() => openModal(lokesItem.image, lokesItem.alt)}
+                    >
+                      <FaSearch />
+                    </p>
+                  </div>
                 </div>
               ))}
               {item.spirptech.map((spirptechItem, spirptechIndex) => (
@@ -79,7 +106,7 @@ export default function Products() {
                     <Image src={spirptechItem.image} alt={spirptechItem.alt} />
                   </div>
                   <p className={styles.name}>{spirptechItem.alt}</p>
-                  <a href={spirptechItem.link} className={styles.readMore}>
+                  <a href={spirptechItem.link} className={styles.readMore} target="_blank">
                     閱讀更多
                   </a>
                 </div>
@@ -87,6 +114,13 @@ export default function Products() {
             </div>
           ))}
         </section>
+
+        <Modal
+          imageSrc={modalImageSrc}
+          altText={modalAltText}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />
       </div>
     </Layout>
   );

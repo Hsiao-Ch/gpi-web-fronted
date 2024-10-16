@@ -5,11 +5,21 @@
   display: flex;
   margin: 2rem 3rem;
 
+  @include Small {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+
   .sidebar {
     width: 200px;
     display: flex;
     flex-direction: column;
     padding-right: 1rem;
+
+    @include Small {
+      width: 100%;
+    }
 
     p {
       border-bottom: 1px solid #eaeaea;
@@ -44,6 +54,14 @@
     margin: 2rem 5rem 5rem 2rem;
     width: 100%;
 
+    @include Medium {
+      margin: 2rem 0rem 5rem 2rem;
+    }
+
+    @include Small {
+      margin: 2rem 0rem 5rem 0;
+    }
+
     p {
       margin-bottom: 1rem;
     }
@@ -51,8 +69,16 @@
     .itemWrap {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
+      gap: 1rem;
       row-gap: 5rem;
+
+      @include Medium {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include X-Small {
+        grid-template-columns: 1fr;
+      }
 
       .item {
         position: relative;
