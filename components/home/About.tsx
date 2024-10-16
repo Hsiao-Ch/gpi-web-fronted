@@ -19,7 +19,7 @@ export default function About() {
           <p className={styles.content}>
             以「信任」為松鴻興業的核心價值：信是相信；任是當責。
           </p>
-          <a href="" className={styles.readMore}>
+          <a href="/profilo/about" className={styles.readMore}>
             了解更多
           </a>
         </div>
@@ -32,7 +32,7 @@ export default function About() {
             致力於供應鏈與業務管理，以投入效益的觀點，善用地球資源，
             提供和諧永續環境的創新服務。
           </p>
-          <a href="" className={styles.readMore}>
+          <a href="/profilo/about" className={styles.readMore}>
             了解更多
           </a>
         </div>
@@ -42,7 +42,7 @@ export default function About() {
           </div>
           <p className={styles.subTitle}>我們如何工作</p>
           <p className={styles.content}></p>
-          <a href="" className={styles.readMore}>
+          <a href="/profilo/about" className={styles.readMore}>
             了解更多
           </a>
         </div>

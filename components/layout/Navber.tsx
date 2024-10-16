@@ -79,15 +79,19 @@ export default function Navbar() {
           </div>
         </li>
 
-        <li className={`${styles.linkItem} ${styles.dropdown}`}>
+        <li className={styles.linkItem}>
+          <a href="/contact">聯絡我們</a>
+        </li>
+
+        {/* <li className={`${styles.linkItem} ${styles.dropdown}`}>
           <p className={styles.item}>
-            聯絡我們 <IoMdArrowDropdown />
+            聯絡資訊 <IoMdArrowDropdown />
           </p>
           <div className={styles.dropdownMenu}>
-            <a href="/maintenance">聯絡我們</a>
+            <a href="/contact">聯絡我們</a>
             <a href="/installation">線上回饋</a>
           </div>
-        </li>
+        </li> */}
       </ul>
 
       {/* Mobile Menu */}
@@ -131,7 +135,10 @@ export default function Navbar() {
               </div>
             )}
           </li>
-          <li className={`${styles.linkItem} ${styles.dropdown}`}>
+          <li className={styles.linkItem}>
+            <a href="/contact">聯絡我們</a>
+          </li>
+          {/* <li className={`${styles.linkItem} ${styles.dropdown}`}>
             <p className={styles.item} onClick={toggleContact}>
               聯絡資訊
               <span>
@@ -140,11 +147,11 @@ export default function Navbar() {
             </p>
             {contactIsShow && (
               <div className={styles.dropdownMenu}>
-                <a href="/maintenance">聯絡我們</a>
+                <a href="/contact">聯絡我們</a>
                 <a href="/installation">線上回饋</a>
               </div>
             )}
-          </li>
+          </li> */}
         </div>
       )}
     </nav>

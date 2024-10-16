@@ -54,7 +54,7 @@ export default function Recruitment() {
             <p>工作內容: </p>
             <ul>
               {content[0].project.map((item, index) => (
-                <li>{index + 1}. {item}</li>
+                <li key={index}>{index + 1}. {item}</li>
               ))}
             </ul>
             <p className={styles.readMore}>
@@ -69,7 +69,7 @@ export default function Recruitment() {
             <p>工作內容: </p>
             <ul>
               {content[0].domestic.map((item, index) => (
-                <li>{index + 1}. {item}</li>
+                <li key={index}>{index + 1}. {item}</li>
               ))}
             </ul>
             <p className={styles.readMore}>
@@ -84,7 +84,7 @@ export default function Recruitment() {
             <p>工作內容: </p>
             <ul>
               {content[0].reserve.map((item, index) => (
-                <li>{index + 1}. {item}</li>
+                <li key={index}>{index + 1}. {item}</li>
               ))}
             </ul>
             <p className={styles.readMore}>

@@ -1,0 +1,70 @@
+@import "@/styles/base/mixin";
+@import "@/styles/base/variables";
+
+.wrap {
+    width: 250px;
+
+    @include Small {
+        width: 180px;
+    }
+
+    @include X-Small {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .linkItems {
+        margin-bottom: 2rem;
+
+        li {
+            border: .5px solid #e1e1e1d1;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e1e1e18b;
+                transition: background-color .5s ease;
+
+                svg {
+                    padding-right: 0;
+                    transition: padding-right .5s ease;
+                }
+            }
+
+            svg {
+                color: #5f635d;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .helpWrap {
+        padding: 2rem 0 3rem;
+
+        @include X-Small {
+            padding: 0 0 3rem;
+        }
+
+        h2 {
+            border-bottom: 1px #ccc solid;
+            margin-bottom: 2rem;
+            padding-bottom: .5rem;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        p {
+            margin-bottom: .5rem;
+            letter-spacing: 2px;
+
+            span {
+                font-weight: 700;
+                margin-right: .5rem;
+            }
+        }
+    }
+}

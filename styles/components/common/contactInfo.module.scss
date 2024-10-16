@@ -1,0 +1,51 @@
+@import "@/styles/base/variables";
+@import "@/styles/base/mixin";
+@import "@/styles/base/extends";
+
+.container {
+  width: 100%;
+
+  .inputItem {
+    width: 100%;
+
+    input,
+    textarea {
+      width: calc(100% - 2rem);
+      height: 30px;
+      padding: 0.5rem;
+      border: none;
+      outline: none;
+      background-color: #f8f8f8;
+      margin: 0.5rem 0;
+      border: 1px solid #fff;
+
+      &:focus {
+        border: 1px solid #000;
+        transition: 1s border ease;
+      }
+    }
+
+    textarea {
+      height: 100px;
+    }
+  }
+
+  .submitWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .submitButton {
+      cursor: pointer;
+      float: right;
+      border: 1px solid #000;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+
+      &:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+  }
+}
