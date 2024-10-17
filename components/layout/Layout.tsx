@@ -2,8 +2,6 @@ import Navbar from "./Navber";
 import Footer from "./Footer";
 import Head from "next/head";
 
-import logo from '@/public/GPi logo.jpg';
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>

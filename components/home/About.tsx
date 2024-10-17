@@ -3,6 +3,7 @@ import pic_4 from "@/public/about/pic-4.jpg";
 import pic_2 from "@/public/about/pic-2.jpg";
 import pic_3 from "@/public/about/pic-3.jpg";
 import styles from "@/styles/components/home/about.module.scss";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -19,9 +20,9 @@ export default function About() {
           <p className={styles.content}>
             以「信任」為松鴻興業的核心價值：信是相信；任是當責。
           </p>
-          <a href="/profilo/about" className={styles.readMore}>
+          <Link href="/profilo/about" className={styles.readMore}>
             了解更多
-          </a>
+          </Link>
         </div>
         <div className={styles.items}>
           <div className={styles.image}>
@@ -32,9 +33,9 @@ export default function About() {
             致力於供應鏈與業務管理，以投入效益的觀點，善用地球資源，
             提供和諧永續環境的創新服務。
           </p>
-          <a href="/profilo/about" className={styles.readMore}>
+          <Link href="/profilo/about" className={styles.readMore}>
             了解更多
-          </a>
+          </Link>
         </div>
         <div className={styles.items}>
           <div className={styles.image}>
@@ -42,9 +43,9 @@ export default function About() {
           </div>
           <p className={styles.subTitle}>我們如何工作</p>
           <p className={styles.content}></p>
-          <a href="/profilo/about" className={styles.readMore}>
+          <Link href="/profilo/about" className={styles.readMore}>
             了解更多
-          </a>
+          </Link>
         </div>
       </div>
     </section>

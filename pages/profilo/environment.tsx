@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { MdLabelImportantOutline } from "react-icons/md";
 
 import Layout from "@/components/layout/Layout";
 import Sidebar from "@/components/layout/Sidebar";

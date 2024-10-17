@@ -1,5 +1,3 @@
-import Image from "next/image";
-import logo from "@/public/GPi logo.jpg";
 import { FaArrowRight, FaFacebook } from "react-icons/fa";
 import { FooterLinkData } from "@/lib/data/footerData";
 import styles from "@/styles/components/layout/footer.module.scss";
@@ -23,7 +21,7 @@ export default function Footer() {
           <h2>相關連結</h2>
           <div className={styles.links}>
             {FooterLinkData.map((item, index) => (
-              <Link href={item.link}>
+              <Link key={index} href={item.link}>
                 <FaArrowRight />
                 {item.name}
               </Link>

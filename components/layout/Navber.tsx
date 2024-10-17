@@ -4,12 +4,12 @@ import Logo from "@/public/GPi logo.jpg";
 import Image from "next/image";
 import { IoMdArrowDropdown, IoIosArrowDown } from "react-icons/io";
 import { FooterLinkData } from "@/lib/data/footerData";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [aboutIsShow, setAboutIsShow] = useState(false);
   const [serviceIsShow, setServiceIsShow] = useState(false);
-  const [contactIsShow, setContactIsShow] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,16 +23,12 @@ export default function Navbar() {
     setServiceIsShow(!serviceIsShow);
   };
 
-  const toggleContact = () => {
-    setContactIsShow(!contactIsShow);
-  };
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <a href="/" className={styles.logoLink}>
+        <Link href="/" className={styles.logoLink}>
           <Image src={Logo} alt="gpi logo" />
-        </a>
+        </Link>
       </div>
 
       {/* Hamburger Icon */}
@@ -45,7 +41,7 @@ export default function Navbar() {
       {/* Desktop Links */}
       <ul className={styles.links}>
         <li className={styles.linkItem}>
-          <a href="/">首頁</a>
+          <Link href="/">首頁</Link>
         </li>
 
         {/* Dropdown for 公司簡介 */}
@@ -55,16 +51,16 @@ export default function Navbar() {
           </p>
           <div className={styles.dropdownMenu}>
             {FooterLinkData.map((item, index) => (
-              <a key={index} href={item.link}>
+              <Link key={index} href={item.link}>
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </li>
 
         {/* Dropdown for 產品介紹 */}
         <li className={styles.linkItem}>
-          <a href="/products">產品介紹</a>
+          <Link href="/products">產品介紹</Link>
         </li>
 
         {/* Dropdown for 服務項目 */}
@@ -73,14 +69,14 @@ export default function Navbar() {
             服務項目 <IoMdArrowDropdown />
           </p>
           <div className={styles.dropdownMenu}>
-            <a href="/maintenance">技術諮詢</a>
-            <a href="/installation">性能測量</a>
-            <a href="/installation">保養維修</a>
+            <Link href="/maintenance">技術諮詢</Link>
+            <Link href="/installation">性能測量</Link>
+            <Link href="/installation">保養維修</Link>
           </div>
         </li>
 
         <li className={styles.linkItem}>
-          <a href="/contact">聯絡我們</a>
+          <Link href="/contact">聯絡我們</Link>
         </li>
 
         {/* <li className={`${styles.linkItem} ${styles.dropdown}`}>
@@ -88,8 +84,8 @@ export default function Navbar() {
             聯絡資訊 <IoMdArrowDropdown />
           </p>
           <div className={styles.dropdownMenu}>
-            <a href="/contact">聯絡我們</a>
-            <a href="/installation">線上回饋</a>
+            <Link href="/contact">聯絡我們</Link>
+            <Link href="/installation">線上回饋</Link>
           </div>
         </li> */}
       </ul>
@@ -98,7 +94,7 @@ export default function Navbar() {
       {isOpen && (
         <div className={styles.mobileMenu}>
           <li className={styles.linkItem}>
-            <a href="/">首頁</a>
+            <Link href="/">首頁</Link>
           </li>
           <li className={`${styles.linkItem} ${styles.dropdown}`}>
             <p className={styles.item} onClick={toggleAbout}>
@@ -110,15 +106,15 @@ export default function Navbar() {
             {aboutIsShow && (
               <div className={styles.dropdownMenu}>
                 {FooterLinkData.map((item, index) => (
-                  <a key={index} href={item.link}>
+                  <Link key={index} href={item.link}>
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </li>
           <li className={styles.linkItem}>
-            <a href="/products">產品介紹</a>
+            <Link href="/products">產品介紹</Link>
           </li>
           <li className={`${styles.linkItem} ${styles.dropdown}`}>
             <p className={styles.item} onClick={toggleService}>
@@ -129,14 +125,14 @@ export default function Navbar() {
             </p>
             {serviceIsShow && (
               <div className={styles.dropdownMenu}>
-                <a href="/maintenance">技術諮詢</a>
-                <a href="/installation">性能測量</a>
-                <a href="/installation">保養維修</a>
+                <Link href="/maintenance">技術諮詢</Link>
+                <Link href="/installation">性能測量</Link>
+                <Link href="/installation">保養維修</Link>
               </div>
             )}
           </li>
           <li className={styles.linkItem}>
-            <a href="/contact">聯絡我們</a>
+            <Link href="/contact">聯絡我們</Link>
           </li>
           {/* <li className={`${styles.linkItem} ${styles.dropdown}`}>
             <p className={styles.item} onClick={toggleContact}>
@@ -147,8 +143,8 @@ export default function Navbar() {
             </p>
             {contactIsShow && (
               <div className={styles.dropdownMenu}>
-                <a href="/contact">聯絡我們</a>
-                <a href="/installation">線上回饋</a>
+                <Link href="/contact">聯絡我們</Link>
+                <Link href="/installation">線上回饋</Link>
               </div>
             )}
           </li> */}
